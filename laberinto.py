@@ -3,17 +3,17 @@ import readchar
 from readchar import readkey, key
 
 def covertir_mapa(mapa:str) -> list: 
-    
     filas=mapa.split("\n")
     laberinto_lista_de_listas = [list(linea) for linea in filas]
                 
     return laberinto_lista_de_listas  
 
-def mostrar_laberinto(mapa:list):
+def mostrer_laberinto(mapa:list):
     os.system('cls' if os.name == 'nt' else 'clear')
     for fila in mapa:
         for caracter in fila:
             print(caracter, end=" ")
+            
         print() 
         
 def main_loop(mapa:list, pos_inicial:tuple, pos_final:tuple):
@@ -46,7 +46,7 @@ def main_loop(mapa:list, pos_inicial:tuple, pos_final:tuple):
             mapa[px][new_py]='p'
             py=new_py  
             
-        mostrar_laberinto(mapa)
+        mostrer_laberinto(mapa)
     print("fin del juego")          
             
 laberinto=covertir_mapa("..#########\n......#.#.#\n###.###.#.#\n#.....#.#.#\n#.###.#.#.#\n#.#.......#\n#.#####.###\n#.#...#...#\n#.#.###.#.#\n#.....#.#.#\n#########.#")
