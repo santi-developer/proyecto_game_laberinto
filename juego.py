@@ -83,7 +83,7 @@ class JuegoArchivo(Juego):
         
         
 def main ():         
-    prueba=JuegoArchivo('D:\\laberintos')
+    prueba=JuegoArchivo('D:\\trabajito\\laberintos')
     pos_ini,pos_final,laberinto=prueba._leer_datos()  
     juego=Juego(pos_ini,pos_final, laberinto)
     juego._main_loop()
