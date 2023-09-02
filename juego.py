@@ -56,6 +56,25 @@ class Juego:
 
         print("Fin del juego")
         
+          # Getters y setters para los atributos privados
+    def get_laberinto(self):
+        return self._laberinto
+
+    def set_laberinto(self, laberinto):
+        self._laberinto = laberinto
+
+    def get_pos_inicial(self):
+        return self._pos_inicial
+
+    def set_pos_inicial(self, pos_inicial):
+        self._pos_inicial = pos_inicial
+
+    def get_pos_final(self):
+        return self._pos_final
+
+    def set_pos_final(self, pos_final):
+        self._pos_final = pos_final
+        
 class JuegoArchivo(Juego):
     
     def __init__(self,direccion_carpeta):
